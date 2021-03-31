@@ -43,7 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="C:\Users\Austin\Downloads\Hello.cs">
+      <Link>Hello.cs</Link>
+    </Compile>
+    <Compile Include="C:\Users\Austin\Downloads\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
