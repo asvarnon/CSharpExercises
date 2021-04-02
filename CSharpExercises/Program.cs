@@ -6,8 +6,9 @@ class Program
 {
 	//ignore static for right now... just easiest way to keep code small
 
-	static Hello hello = new Hello();
-	static ConsoleApp1.Hello hello1 = new ConsoleApp1.Hello();
+	private static Hello hello = new Hello();
+	private static ConsoleApp1.Hello hello1 = new ConsoleApp1.Hello();
+    private static ConsoleApp2.Hello hello2 = new ConsoleApp2.Hello();
 
 	//Will not compile
 	//Hello hello2 = new ConsoleApp1.Hello();
@@ -18,6 +19,7 @@ class Program
 	{
 		hello.DoHello();
 		hello1.DoHello();
+		hello2.DoHello();
 	}
 }
 
