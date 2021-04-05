@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using CSharpExercises;
 
 //removed namespace here to prove it isnt needed
@@ -18,12 +19,30 @@ class Program
 	
 	static void Main(string[] args)
 	{
-		hello.DoHello();
-		hello1.DoHello();
-		hello2.DoHello();
+		//hello.DoHello();
+		//hello1.DoHello();
+		//hello2.DoHello();
 
-        Dog dog1 = new Dog{name = "Jasper", age = 6, breed = "Lab"};
-        dog1.name += "!";
+		//Dog dog1 = new Dog{name = "Jasper", age = 6, breed = "Lab"};
+
+        try
+        {
+        string number = "1234";
+            //int.Parse(number);
+            //byte b = Convert.ToByte(number);
+            //Console.WriteLine(b);
+
+            string str = "true";
+            bool b = Convert.ToBoolean(str);
+            Console.WriteLine(b);
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("The number could not be converted");
+            
+        }
+
+
     }
 }
 

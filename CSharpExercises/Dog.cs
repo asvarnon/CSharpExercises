@@ -8,7 +8,11 @@ namespace CSharpExercises
 {
     class Dog
     {
-        
+        public Dog()
+        {
+            
+        }
+
         public string name { get; set; }
         public string breed { get; set; }
         public int age { get; set; }
