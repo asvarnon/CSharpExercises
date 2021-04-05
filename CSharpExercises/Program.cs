@@ -1,4 +1,5 @@
 ﻿using System;
+using CSharpExercises;
 
 //removed namespace here to prove it isnt needed
 
@@ -20,6 +21,9 @@ class Program
 		hello.DoHello();
 		hello1.DoHello();
 		hello2.DoHello();
-	}
+
+        Dog dog1 = new Dog{name = "Jasper", age = 6, breed = "Lab"};
+        dog1.name += "!";
+    }
 }
 
