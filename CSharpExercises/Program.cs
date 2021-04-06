@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Globalization;
 using CSharpExercises;
+using CSharpExercises.Math;
 
 //removed namespace here to prove it isnt needed
 
-class Program
+public class Program
 {
 	//ignore static for right now... just easiest way to keep code small
 
@@ -15,9 +16,9 @@ class Program
 	//Will not compile
 	//Hello hello2 = new ConsoleApp1.Hello();
 	//ConsoleApp1.Hello hello3 = new Hello();
+    
 	
-	
-	static void Main(string[] args)
+	public static void Main(string[] args)
 	{
 		//hello.DoHello();
 		//hello1.DoHello();
@@ -25,24 +26,31 @@ class Program
 
 		//Dog dog1 = new Dog{name = "Jasper", age = 6, breed = "Lab"};
 
-        try
-        {
-        string number = "1234";
-            //int.Parse(number);
-            //byte b = Convert.ToByte(number);
-            //Console.WriteLine(b);
+        //try
+        //{
+        //string number = "1234";
+        //    //int.Parse(number);
+        //    //byte b = Convert.ToByte(number);
+        //    //Console.WriteLine(b);
 
-            string str = "true";
-            bool b = Convert.ToBoolean(str);
-            Console.WriteLine(b);
-        }
-        catch (Exception)
-        {
-            Console.WriteLine("The number could not be converted");
+        //    string str = "true";
+        //    bool b = Convert.ToBoolean(str);
+        //    Console.WriteLine(b);
+        //}
+        //catch (Exception)
+        //{
+        //    Console.WriteLine("The number could not be converted");
             
-        }
+        //}
 
+        //Person john = new Person();
+        //john.firstName = "John";
+        //john.lastName = "Johnson";
+        //john.introduce();
 
+        Calculator calculator = new Calculator();
+        int result = calculator.add(1, 2);
+        Console.WriteLine($"Result is {result}", result);
     }
 }
 
