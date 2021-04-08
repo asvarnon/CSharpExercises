@@ -50,7 +50,9 @@ public class Program
 
         Calculator calculator = new Calculator();
         int result = calculator.add(1, 2);
+        int subtractResult = calculator.subtract(3, 2);
         Console.WriteLine($"Result is {result}", result);
+        Console.WriteLine($"result of subtraction is {subtractResult}", subtractResult);
     }
 }
 
