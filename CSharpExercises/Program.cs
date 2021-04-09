@@ -68,18 +68,31 @@ public class Program
         //Console.WriteLine(flags[1]);
         //Console.WriteLine(flags[2]);
 
-        string[] names = new string[3] { "Jack", "John", "Mary" };
-        Console.WriteLine(names[1]);
+        //string[] names = new string[3] { "Jack", "John", "Mary" };
+        //Console.WriteLine(names[1]);
 
         //string list = string.Join(",", numbers);
         //Console.WriteLine(list);
 
-        string name = names[1];
-        char firstChar = name[0];
-        Console.WriteLine(firstChar);
+        //string name = names[1];
+        //char firstChar = name[0];
+        //Console.WriteLine(firstChar);
         //Strings are immutable
 
-        string path = @"c:\projects\project1\folder1";
+        //string path = @"c:\projects\project1\folder1";
+
+        int number;
+        string firstName = "Austin";
+        string lastName = "Varnon";
+        string fullName = string.Format("{0} {1}", firstName, lastName);
+
+        string text = @"Hi John, 
+Look into the following paths:
+C:folder1\folder2
+C:folder3\folder4";
+        Console.WriteLine(text);
+
+
     }
 }
 
