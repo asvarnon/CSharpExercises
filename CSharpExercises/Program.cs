@@ -20,11 +20,11 @@ public class Program
 	
 	public static void Main(string[] args)
 	{
-		//hello.DoHello();
-		//hello1.DoHello();
-		//hello2.DoHello();
+        //hello.DoHello();
+        //hello1.DoHello();
+        //hello2.DoHello();
 
-		//Dog dog1 = new Dog{name = "Jasper", age = 6, breed = "Lab"};
+        //Dog dog1 = new Dog{name = "Jasper", age = 6, breed = "Lab"};
 
         //try
         //{
@@ -40,7 +40,7 @@ public class Program
         //catch (Exception)
         //{
         //    Console.WriteLine("The number could not be converted");
-            
+
         //}
 
         //Person john = new Person();
@@ -54,22 +54,32 @@ public class Program
         //Console.WriteLine($"Result is {result}", result);
         //Console.WriteLine($"result of subtraction is {subtractResult}", subtractResult);
 
-        int[] numbers = new int[3];
-        numbers[0] = 1;
+        //int[] numbers = new int[3];
+        //numbers[0] = 1;
 
-        Console.WriteLine(numbers[0]);
-        Console.WriteLine(numbers[1]);
-        Console.WriteLine(numbers[2]);
+        //Console.WriteLine(numbers[0]);
+        //Console.WriteLine(numbers[1]);
+        //Console.WriteLine(numbers[2]);
 
-        bool[] flags = new bool[3];
-        flags[0] = true;
+        //bool[] flags = new bool[3];
+        //flags[0] = true;
 
-        Console.WriteLine(flags[0]);
-        Console.WriteLine(flags[1]);
-        Console.WriteLine(flags[2]);
+        //Console.WriteLine(flags[0]);
+        //Console.WriteLine(flags[1]);
+        //Console.WriteLine(flags[2]);
 
-        string[] names = new string[3] {"Jack", "John", "Mary"};
+        string[] names = new string[3] { "Jack", "John", "Mary" };
         Console.WriteLine(names[1]);
+
+        //string list = string.Join(",", numbers);
+        //Console.WriteLine(list);
+
+        string name = names[1];
+        char firstChar = name[0];
+        Console.WriteLine(firstChar);
+        //Strings are immutable
+
+        string path = @"c:\projects\project1\folder1";
     }
 }
 
