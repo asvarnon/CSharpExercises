@@ -4,7 +4,6 @@ using CSharpExercises;
 using CSharpExercises.Math;
 
 //removed namespace here to prove it isnt needed
-
 public class Program
 {
 	//ignore static for right now... just easiest way to keep code small
@@ -81,17 +80,28 @@ public class Program
 
         //string path = @"c:\projects\project1\folder1";
 
-        int number;
-        string firstName = "Austin";
-        string lastName = "Varnon";
-        string fullName = string.Format("{0} {1}", firstName, lastName);
+//        int number;
+//        string firstName = "Austin";
+//        string lastName = "Varnon";
+//        string fullName = string.Format("{0} {1}", firstName, lastName);
 
-        string text = @"Hi John, 
-Look into the following paths:
-C:folder1\folder2
-C:folder3\folder4";
-        Console.WriteLine(text);
+//        string text = @"Hi John, 
+//Look into the following paths:
+//C:folder1\folder2
+//C:folder3\folder4";
+//        Console.WriteLine(text);
 
+
+        var enumMethod = ShippingMethod.Express;
+        Console.WriteLine((int)enumMethod);
+
+        var enumMethodId = 3;
+        Console.WriteLine((ShippingMethod)enumMethodId);
+
+        Console.WriteLine(enumMethod.ToString());
+
+        string methodName = "Express";
+        var shippingMethod = (ShippingMethod) Enum.Parse(typeof(ShippingMethod), methodName);
 
     }
 }
