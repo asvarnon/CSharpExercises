@@ -92,16 +92,29 @@ public class Program
 //        Console.WriteLine(text);
 
 
-        var enumMethod = ShippingMethod.Express;
-        Console.WriteLine((int)enumMethod);
+        //var enumMethod = ShippingMethod.Express;
+        //Console.WriteLine((int)enumMethod);
 
-        var enumMethodId = 3;
-        Console.WriteLine((ShippingMethod)enumMethodId);
+        //var enumMethodId = 3;
+        //Console.WriteLine((ShippingMethod)enumMethodId);
 
-        Console.WriteLine(enumMethod.ToString());
+        //Console.WriteLine(enumMethod.ToString());
 
-        string methodName = "Express";
-        var shippingMethod = (ShippingMethod) Enum.Parse(typeof(ShippingMethod), methodName);
+        //string methodName = "Express";
+        //var shippingMethod = (ShippingMethod) Enum.Parse(typeof(ShippingMethod), methodName);
+
+
+        int a = 10;
+        int b = a;
+        b++;
+        Console.WriteLine(string.Format("a: {0}, b: {1}", a, b));
+
+        int[] array1 = new int[3] {1, 2, 3};
+        int[] array2 = array1;
+        array2[0] = 0;
+        Console.WriteLine(string.Format("array1[0]: {0}, array2[0]: {1}", array1[0], array2[0]));
+
+
 
     }
 }
