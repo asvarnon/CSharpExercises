@@ -113,6 +113,7 @@ public class Program
         int[] array2 = array1;
         array2[0] = 0;
         Console.WriteLine(string.Format("array1[0]: {0}, array2[0]: {1}", array1[0], array2[0]));
+        Console.WriteLine(string.Format("array1[2]: {0}, array2[0]: {1}", array1[2], array2[2]));
 
 
 
