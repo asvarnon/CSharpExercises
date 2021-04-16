@@ -173,9 +173,8 @@ public class Program
 
         Console.WriteLine("Enter a number for max value of range.");
         String userInput = Console.ReadLine();
-        double convertedInput = double.Parse(userInput);
 
-        foreach (var number in randomNumberList(convertedInput))
+        foreach (var number in randomNumberList(double.Parse(userInput)))
         {
             Console.WriteLine(number);
         }
