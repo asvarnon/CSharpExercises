@@ -19,9 +19,12 @@ public class Program
 	
 	public static void Main(string[] args)
 	{
+        //-------------------------------------------------------------Namespace Example----------------------------------------------------------------------
         //hello.DoHello();
         //hello1.DoHello();
         //hello2.DoHello();
+
+        //-------------------------------------------------------------Try/catch/OOP Example----------------------------------------------------------------------
 
         //Dog dog1 = new Dog{name = "Jasper", age = 6, breed = "Lab"};
 
@@ -53,6 +56,8 @@ public class Program
         //Console.WriteLine($"Result is {result}", result);
         //Console.WriteLine($"result of subtraction is {subtractResult}", subtractResult);
 
+        //-------------------------------------------------------------Arrays Example----------------------------------------------------------------------
+
         //int[] numbers = new int[3];
         //numbers[0] = 1;
 
@@ -78,19 +83,22 @@ public class Program
         //Console.WriteLine(firstChar);
         //Strings are immutable
 
+        //-------------------------------------------------------------Strings Example----------------------------------------------------------------------
+
         //string path = @"c:\projects\project1\folder1";
 
-//        int number;
-//        string firstName = "Austin";
-//        string lastName = "Varnon";
-//        string fullName = string.Format("{0} {1}", firstName, lastName);
+        //        int number;
+        //        string firstName = "Austin";
+        //        string lastName = "Varnon";
+        //        string fullName = string.Format("{0} {1}", firstName, lastName);
 
-//        string text = @"Hi John, 
-//Look into the following paths:
-//C:folder1\folder2
-//C:folder3\folder4";
-//        Console.WriteLine(text);
+        //        string text = @"Hi John, 
+        //Look into the following paths:
+        //C:folder1\folder2
+        //C:folder3\folder4";
+        //        Console.WriteLine(text);
 
+        //-------------------------------------------------------------Enum Example----------------------------------------------------------------------
 
         //var enumMethod = ShippingMethod.Express;
         //Console.WriteLine((int)enumMethod);
@@ -103,6 +111,7 @@ public class Program
         //string methodName = "Express";
         //var shippingMethod = (ShippingMethod) Enum.Parse(typeof(ShippingMethod), methodName);
 
+        //-------------------------------------------------------------Reference and Value types Example----------------------------------------------------------------------
 
         //int a = 10;
         //int b = a;
@@ -115,12 +124,29 @@ public class Program
         //Console.WriteLine(string.Format("array1[0]: {0}, array2[0]: {1}", array1[0], array2[0]));
         //Console.WriteLine(string.Format("array1[2]: {0}, array2[0]: {1}", array1[2], array2[2]));
 
-        bool isGoldCustomer = true;
-        double price = (!isGoldCustomer) ? 19.95 : 29.95;
-        Console.WriteLine(price);
+        //-------------------------------------------------------------inline conditional & switch case Example----------------------------------------------------------------------
 
+        //bool isGoldCustomer = true;
+        //double price = (!isGoldCustomer) ? 19.95 : 29.95;
+        //Console.WriteLine(price);
+
+
+        Enum season = Season.Winter;
+
+        switch (season)
+        {
+            case Season.Autumn:
+            case Season.Summer:
+                Console.WriteLine("Fall and Summer Sales Event!");
+                break;
+            default:
+                Console.WriteLine("Default message here.");
+                break;
+        }
 
 
     }
+
+
 }
 
