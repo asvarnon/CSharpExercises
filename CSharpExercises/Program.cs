@@ -124,25 +124,43 @@ public class Program
         //Console.WriteLine(string.Format("array1[0]: {0}, array2[0]: {1}", array1[0], array2[0]));
         //Console.WriteLine(string.Format("array1[2]: {0}, array2[0]: {1}", array1[2], array2[2]));
 
-        //-------------------------------------------------------------inline conditional & switch case Example----------------------------------------------------------------------
+        //-------------------------------------------------------------inline conditional  Example----------------------------------------------------------------------
 
         //bool isGoldCustomer = true;
         //double price = (!isGoldCustomer) ? 19.95 : 29.95;
         //Console.WriteLine(price);
 
 
-        Enum season = Season.Winter;
+        //Enum season = Season.Winter;
 
-        switch (season)
+        //switch (season)
+        //{
+        //    case Season.Autumn:
+        //    case Season.Summer:
+        //        Console.WriteLine("Fall and Summer Sales Event!");
+        //        break;
+        //    default:
+        //        Console.WriteLine("Default message here.");
+        //        break;
+        //}
+
+
+        //-------------------------------------------------------------Valid/Invalid number exercise----------------------------------------------------------------------
+
+        Console.WriteLine("Enter a number between 1 & 10");
+        String userInput = Console.ReadLine();
+        int convertedInput = int.Parse(userInput);
+
+        if (convertedInput >= 1 && convertedInput <= 10)
         {
-            case Season.Autumn:
-            case Season.Summer:
-                Console.WriteLine("Fall and Summer Sales Event!");
-                break;
-            default:
-                Console.WriteLine("Default message here.");
-                break;
+            Console.WriteLine("Valid");
         }
+        else
+        {
+            Console.WriteLine("Invalid");
+        }
+
+
 
 
     }
