@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using CSharpExercises;
 using CSharpExercises.Math;
@@ -15,7 +16,15 @@ public class Program
 	//Will not compile
 	//Hello hello2 = new ConsoleApp1.Hello();
 	//ConsoleApp1.Hello hello3 = new Hello();
-    
+    public static List<double> randomNumberList(double max)
+    {
+        List<double> numbers = new List<double>();
+        for (int i = 0; i < max; i++)
+        {
+            numbers.Add(i + 1);
+        }
+        return numbers;
+    }
 	
 	public static void Main(string[] args)
 	{
@@ -147,19 +156,29 @@ public class Program
 
         //-------------------------------------------------------------Valid/Invalid number exercise----------------------------------------------------------------------
 
-        Console.WriteLine("Enter a number between 1 & 10");
+        //Console.WriteLine("Enter a number between 1 & 10");
+        //String userInput = Console.ReadLine();
+        //int convertedInput = int.Parse(userInput);
+
+        //if (convertedInput >= 1 && convertedInput <= 10)
+        //{
+        //    Console.WriteLine("Valid");
+        //}
+        //else
+        //{
+        //    Console.WriteLine("Invalid");
+        //}
+
+        //-------------------------------------------------------------iteration examples----------------------------------------------------------------------
+
+        Console.WriteLine("Enter a number for max value of range.");
         String userInput = Console.ReadLine();
-        int convertedInput = int.Parse(userInput);
+        double convertedInput = double.Parse(userInput);
 
-        if (convertedInput >= 1 && convertedInput <= 10)
+        foreach (var number in randomNumberList(convertedInput))
         {
-            Console.WriteLine("Valid");
+            Console.WriteLine(number);
         }
-        else
-        {
-            Console.WriteLine("Invalid");
-        }
-
 
 
 
