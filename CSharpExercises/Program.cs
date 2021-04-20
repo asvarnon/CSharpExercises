@@ -171,18 +171,29 @@ public class Program
 
         //-------------------------------------------------------------iteration examples----------------------------------------------------------------------
 
-        Console.WriteLine("Enter a number for max value of range.");
-        String userInput = Console.ReadLine();
+        //Console.WriteLine("Enter a number for max value of range.");
+        //String userInput = Console.ReadLine();
 
-        foreach (var number in randomNumberList(double.Parse(userInput)))
+        //foreach (var number in randomNumberList(double.Parse(userInput)))
+        //{
+        //    Console.WriteLine(number);
+
+
+        var random = new Random();
+        for (var i = 0; i < 10; i++)
         {
-            Console.WriteLine(number);
+            //can produce random string using numbers that represent letters
+            Console.Write((char)random.Next(97,123));
         }
 
+        Console.WriteLine();
+        
 
 
     }
 
-
 }
+
+
+
 
