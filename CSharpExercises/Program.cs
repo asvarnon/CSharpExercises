@@ -178,15 +178,19 @@ public class Program
         //{
         //    Console.WriteLine(number);
 
-
+        const int passwordLength = 10;
         var random = new Random();
-        for (var i = 0; i < 10; i++)
+        char[] buffer = new char[passwordLength];
+
+        for (var i = 0; i < passwordLength; i++)
         {
             //can produce random string using numbers that represent letters
-            Console.Write((char)random.Next(97,123));
+           buffer[i] = (char)('a' + random.Next(0, 26));
         }
 
-        Console.WriteLine();
+        String password = new string(buffer);
+
+        Console.WriteLine(password);
         
 
 
