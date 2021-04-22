@@ -178,7 +178,7 @@ public class Program
         //{
         //    Console.WriteLine(number);
 
-        const int passwordLength = 10;
+        const int passwordLength = 26;
         var random = new Random();
         char[] buffer = new char[passwordLength];
 
