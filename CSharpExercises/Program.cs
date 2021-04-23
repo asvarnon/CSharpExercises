@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
 using CSharpExercises;
 using CSharpExercises.Math;
 
@@ -25,7 +26,21 @@ public class Program
         }
         return numbers;
     }
-	
+
+    public static char[] PasswordGenerator(int passwordLength)
+    {
+        var random = new Random();
+        char[] buffer = new char[passwordLength];
+
+        for (var i = 0; i < passwordLength; i++)
+        {
+            //can produce random string using numbers that represent letters
+            buffer[i] = (char)('a' + random.Next(0, 26));
+        }
+
+        return buffer;
+    }
+
 	public static void Main(string[] args)
 	{
         //-------------------------------------------------------------Namespace Example----------------------------------------------------------------------
@@ -178,20 +193,22 @@ public class Program
         //{
         //    Console.WriteLine(number);
 
-        const int passwordLength = 26;
-        var random = new Random();
-        char[] buffer = new char[passwordLength];
+        //const int passwordLength = 26;
+        //var random = new Random();
+        //char[] buffer = new char[passwordLength];
 
-        for (var i = 0; i < passwordLength; i++)
-        {
-            //can produce random string using numbers that represent letters
-           buffer[i] = (char)('a' + random.Next(0, 26));
-        }
-
-        String password = new string(buffer);
+        
+        //for (var i = 0; i < passwordLength; i++)
+        //{
+        //    //can produce random string using numbers that represent letters
+        //   buffer[i] = (char)('a' + random.Next(0, 26));
+        //}
+        
+        String password = new string(PasswordGenerator(26));
+        String password2 = new string(PasswordGenerator(52));
 
         Console.WriteLine(password);
-        
+        Console.WriteLine(password2);
 
 
     }
