@@ -197,18 +197,40 @@ public class Program
         //var random = new Random();
         //char[] buffer = new char[passwordLength];
 
-        
+
         //for (var i = 0; i < passwordLength; i++)
         //{
         //    //can produce random string using numbers that represent letters
         //   buffer[i] = (char)('a' + random.Next(0, 26));
         //}
-        
-        String password = new string(PasswordGenerator(26));
-        String password2 = new string(PasswordGenerator(52));
 
-        Console.WriteLine(password);
-        Console.WriteLine(password2);
+        //String password = new string(PasswordGenerator(26));
+        //String password2 = new string(PasswordGenerator(52));
+
+        //Console.WriteLine(password);
+        //Console.WriteLine(password2);
+
+
+        //-------------------------------------------------------------Multi Dimensional array examples----------------------------------------------------------------------
+
+        //can use object initialization to make array (reminder)
+        int[] numbers = new int[3] {1, 2, 3};
+
+        //2D array    [number of elements, number of elements within each parent element]
+        var matrix = new int[3, 3]
+        {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}
+        };
+
+        // REMEMBER: count starts at 0. 
+        var element = matrix[1, 2];
+        Console.WriteLine(element);
+
+
+
+
 
 
     }
