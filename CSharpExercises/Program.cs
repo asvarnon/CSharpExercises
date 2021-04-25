@@ -214,8 +214,9 @@ public class Program
         //-------------------------------------------------------------Multi Dimensional array examples----------------------------------------------------------------------
 
         //can use object initialization to make array (reminder)
-        int[] numbers = new int[3] {1, 2, 3};
+        int[] numbers = new int[] {1, 2, 3};
 
+        //---------RECTANGULAR ARRAYS
         //2D array    [number of elements, number of elements within each parent element]
         var matrix = new int[3, 3]
         {
@@ -227,6 +228,16 @@ public class Program
         // REMEMBER: count starts at 0. 
         var element = matrix[1, 2];
         Console.WriteLine(element);
+
+        //--------JAGGED ARRAYS
+        var array = new int[3][];
+
+        array[0] = new int[4];
+        array[1] = new int[5];
+        array[2] = new int[3];
+
+        //how to assign each element
+        array[0][0] = 1;
 
 
 
