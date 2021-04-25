@@ -216,6 +216,9 @@ public class Program
         //can use object initialization to make array (reminder)
         int[] numbers = new int[] {1, 2, 3};
 
+        //length
+        Console.WriteLine();
+
         //---------RECTANGULAR ARRAYS
         //2D array    [number of elements, number of elements within each parent element]
         var matrix = new int[3, 3]
