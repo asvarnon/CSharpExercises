@@ -315,21 +315,50 @@ public class Program
         //numbers.Clear();
         //Console.WriteLine($"Count: {numbers.Count}");
 
-        //-------------------------------------------------------------Lists examples----------------------------------------------------------------------
-        var dateTime = new DateTime(2015, 1, 1);
-        var now = DateTime.Now;
-        var today = DateTime.Today;
-        Console.WriteLine($"It is Currently {now.Hour - 12}:{now.Minute}");
+        //-------------------------------------------------------------DateTime examples----------------------------------------------------------------------
+        //var dateTime = new DateTime(2015, 1, 1);
+        //var now = DateTime.Now;
+        //var today = DateTime.Today;
+        //Console.WriteLine($"It is Currently {now.Hour - 12}:{now.Minute}");
 
-        var tomorrow = now.AddDays(1);
-        var yesterday = now.AddDays(-1);
+        //var tomorrow = now.AddDays(1);
+        //var yesterday = now.AddDays(-1);
 
-        Console.WriteLine($"LONG date string: {now.ToLongDateString()}");
-        Console.WriteLine($"SHORT date string: {now.ToShortDateString()}");
-        Console.WriteLine($"LONG time string: {now.ToLongTimeString()}");
-        Console.WriteLine($"SHORT time string: {now.ToShortTimeString()}");
-        Console.WriteLine($"date AND time: {now.ToString("D")}");
-        Console.WriteLine($"date AND time: {now:D}");   //same as above
+        //Console.WriteLine($"LONG date string: {now.ToLongDateString()}");
+        //Console.WriteLine($"SHORT date string: {now.ToShortDateString()}");
+        //Console.WriteLine($"LONG time string: {now.ToLongTimeString()}");
+        //Console.WriteLine($"SHORT time string: {now.ToShortTimeString()}");
+        //Console.WriteLine($"date AND time: {now.ToString("D")}");
+        //Console.WriteLine($"date AND time: {now:D}");   //same as above
+
+        //-------------------------------------------------------------Timespan examples----------------------------------------------------------------------
+
+        //creating
+        var timespan = new TimeSpan(1,2,3);
+        var timespan1 = TimeSpan.FromHours(1);
+
+        var start = DateTime.Now;
+        var end = DateTime.Now.AddMinutes(2);
+        var duration = end - start;
+        Console.WriteLine($"Duration is: {duration}");
+
+        //properties
+        Console.WriteLine($"Minutes: {timespan.Minutes}");
+        Console.WriteLine($"Total Minutes: {timespan.TotalMinutes}");
+
+        // Add (adds 8 minutes to timespan)
+        Console.WriteLine($"Add Example: {timespan.Add(TimeSpan.FromMinutes(8))}");
+
+        //Subtract
+        Console.WriteLine($"Subtract Example: {timespan.Subtract(TimeSpan.FromMinutes(2))}");
+
+        //Timespan to String conversion
+        var convertedTimeSpan = timespan.ToString();
+        Console.WriteLine($"toString {convertedTimeSpan}");
+
+        //String to Timespan
+        Console.WriteLine($"Parse: {TimeSpan.Parse("01:02:03")}");
+        Console.WriteLine($"Parse: {TimeSpan.Parse(convertedTimeSpan)}");
 
     }
 
