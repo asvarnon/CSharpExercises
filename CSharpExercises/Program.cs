@@ -213,79 +213,107 @@ public class Program
 
         //-------------------------------------------------------------Multi Dimensional array examples----------------------------------------------------------------------
 
-        //can use object initialization to make array (reminder)
-        int[] numbers = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        ////can use object initialization to make array (reminder)
+        //int[] numbers = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-        //length
-        Console.WriteLine($"Length: {numbers.Length}", numbers.Length);
+        ////length
+        //Console.WriteLine($"Length: {numbers.Length}", numbers.Length);
 
-        // IndexOf()
-        var index = Array.IndexOf(numbers, 3);
-        Console.WriteLine($"index of 9 is: {index}", index);
+        //// IndexOf()
+        //var index = Array.IndexOf(numbers, 3);
+        //Console.WriteLine($"index of 9 is: {index}", index);
 
-        // Clear()
-        //resets int to 0, booleans to False, and strings to Null.
-        Array.Clear(numbers,1,2);
-        Console.WriteLine("Effect of Clear()");
-        foreach (var num in numbers)
-        {
-            Console.WriteLine(num);   
-        }
+        //// Clear()
+        ////resets int to 0, booleans to False, and strings to Null.
+        //Array.Clear(numbers,1,2);
+        //Console.WriteLine("Effect of Clear()");
+        //foreach (var num in numbers)
+        //{
+        //    Console.WriteLine(num);   
+        //}
 
-        Console.WriteLine("Effect of Copy()");
-        //Copy()
-        int[] anotherArray = new int[3];
-        Array.Copy(numbers, anotherArray,3);
-        foreach (var num in anotherArray)
-        {
-            Console.WriteLine(num);
-        }
+        //Console.WriteLine("Effect of Copy()");
+        ////Copy()
+        //int[] anotherArray = new int[3];
+        //Array.Copy(numbers, anotherArray,3);
+        //foreach (var num in anotherArray)
+        //{
+        //    Console.WriteLine(num);
+        //}
 
-        //Sort()
-        Array.Sort(numbers);
-        Console.WriteLine("Effect of Sort()");
-        foreach (var num in numbers)
-        {
-            Console.WriteLine(num);
-        }
+        ////Sort()
+        //Array.Sort(numbers);
+        //Console.WriteLine("Effect of Sort()");
+        //foreach (var num in numbers)
+        //{
+        //    Console.WriteLine(num);
+        //}
 
-        //Reverse()
-        Array.Reverse(numbers);
-        Console.WriteLine("Effect of Reverse()");
-        foreach (var num in numbers)
-        {
-            Console.WriteLine(num);
-        }
+        ////Reverse()
+        //Array.Reverse(numbers);
+        //Console.WriteLine("Effect of Reverse()");
+        //foreach (var num in numbers)
+        //{
+        //    Console.WriteLine(num);
+        //}
 
 
-        //---------RECTANGULAR ARRAYS
-        //2D array    [number of elements, number of elements within each parent element]
-        var matrix = new int[3, 3]
-        {
-            {1,2,3},
-            {4,5,6},
-            {7,8,9}
-        };
+        ////---------RECTANGULAR ARRAYS
+        ////2D array    [number of elements, number of elements within each parent element]
+        //var matrix = new int[3, 3]
+        //{
+        //    {1,2,3},
+        //    {4,5,6},
+        //    {7,8,9}
+        //};
 
-        // REMEMBER: count starts at 0. 
-        var element = matrix[1, 2];
-        //Console.WriteLine(element);
+        //// REMEMBER: count starts at 0. 
+        //var element = matrix[1, 2];
+        ////Console.WriteLine(element);
 
-        //--------JAGGED ARRAYS
-        var array = new int[3][];
+        ////--------JAGGED ARRAYS
+        //var array = new int[3][];
 
-        array[0] = new int[4];
-        array[1] = new int[5];
-        array[2] = new int[3];
+        //array[0] = new int[4];
+        //array[1] = new int[5];
+        //array[2] = new int[3];
 
-        //how to assign each element
-        array[0][0] = 1;
-        array[0][1] = 2;
+        ////how to assign each element
+        //array[0][0] = 1;
+        //array[0][1] = 2;
 
 
         //-------------------------------------------------------------Lists examples----------------------------------------------------------------------
 
+        var numbers = new List<int>() {1,2,3,4};
+        numbers.Add(1);
+        numbers.AddRange(new int[3] {5,6,7});
 
+        foreach (var num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+        var index = numbers.IndexOf(1);
+        Console.WriteLine($"index of 1 is: {index}", index);
+        Console.WriteLine($"Last index of 1 is: {numbers.LastIndexOf(1)}");
+        Console.WriteLine($"Count: {numbers.Count}");
+
+        //CANNOT modify a collection within a ForEach Loop. 
+        Console.WriteLine("Effect of Remove");
+        for (var i = 0; i < numbers.Count; i++)
+        {
+            if (numbers[i] == 1)
+            {
+                numbers.Remove(numbers[i]);
+            }
+        }
+        foreach (var num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+
+        numbers.Clear();
+        Console.WriteLine($"Count: {numbers.Count}");
 
 
     }
