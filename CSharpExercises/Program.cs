@@ -249,6 +249,15 @@ public class Program
             Console.WriteLine(num);
         }
 
+        //Reverse()
+        Array.Reverse(numbers);
+        Console.WriteLine("Effect of Reverse()");
+        foreach (var num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+
+
         //---------RECTANGULAR ARRAYS
         //2D array    [number of elements, number of elements within each parent element]
         var matrix = new int[3, 3]
@@ -274,6 +283,7 @@ public class Program
         array[0][1] = 2;
 
 
+        //-------------------------------------------------------------Lists examples----------------------------------------------------------------------
 
 
 
