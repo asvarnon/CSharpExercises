@@ -214,10 +214,40 @@ public class Program
         //-------------------------------------------------------------Multi Dimensional array examples----------------------------------------------------------------------
 
         //can use object initialization to make array (reminder)
-        int[] numbers = new int[] {1, 2, 3};
+        int[] numbers = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         //length
-        Console.WriteLine();
+        Console.WriteLine($"Length: {numbers.Length}", numbers.Length);
+
+        // IndexOf()
+        var index = Array.IndexOf(numbers, 3);
+        Console.WriteLine($"index of 9 is: {index}", index);
+
+        // Clear()
+        //resets int to 0, booleans to False, and strings to Null.
+        Array.Clear(numbers,1,2);
+        Console.WriteLine("Effect of Clear()");
+        foreach (var num in numbers)
+        {
+            Console.WriteLine(num);   
+        }
+
+        Console.WriteLine("Effect of Copy()");
+        //Copy()
+        int[] anotherArray = new int[3];
+        Array.Copy(numbers, anotherArray,3);
+        foreach (var num in anotherArray)
+        {
+            Console.WriteLine(num);
+        }
+
+        //Sort()
+        Array.Sort(numbers);
+        Console.WriteLine("Effect of Sort()");
+        foreach (var num in numbers)
+        {
+            Console.WriteLine(num);
+        }
 
         //---------RECTANGULAR ARRAYS
         //2D array    [number of elements, number of elements within each parent element]
@@ -230,7 +260,7 @@ public class Program
 
         // REMEMBER: count starts at 0. 
         var element = matrix[1, 2];
-        Console.WriteLine(element);
+        //Console.WriteLine(element);
 
         //--------JAGGED ARRAYS
         var array = new int[3][];
