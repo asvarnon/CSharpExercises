@@ -285,36 +285,51 @@ public class Program
 
         //-------------------------------------------------------------Lists examples----------------------------------------------------------------------
 
-        var numbers = new List<int>() {1,2,3,4};
-        numbers.Add(1);
-        numbers.AddRange(new int[3] {5,6,7});
+        //var numbers = new List<int>() {1,2,3,4};
+        //numbers.Add(1);
+        //numbers.AddRange(new int[3] {5,6,7});
 
-        foreach (var num in numbers)
-        {
-            Console.WriteLine(num);
-        }
-        var index = numbers.IndexOf(1);
-        Console.WriteLine($"index of 1 is: {index}", index);
-        Console.WriteLine($"Last index of 1 is: {numbers.LastIndexOf(1)}");
-        Console.WriteLine($"Count: {numbers.Count}");
+        //foreach (var num in numbers)
+        //{
+        //    Console.WriteLine(num);
+        //}
+        //var index = numbers.IndexOf(1);
+        //Console.WriteLine($"index of 1 is: {index}", index);
+        //Console.WriteLine($"Last index of 1 is: {numbers.LastIndexOf(1)}");
+        //Console.WriteLine($"Count: {numbers.Count}");
 
-        //CANNOT modify a collection within a ForEach Loop. 
-        Console.WriteLine("Effect of Remove");
-        for (var i = 0; i < numbers.Count; i++)
-        {
-            if (numbers[i] == 1)
-            {
-                numbers.Remove(numbers[i]);
-            }
-        }
-        foreach (var num in numbers)
-        {
-            Console.WriteLine(num);
-        }
+        ////CANNOT modify a collection within a ForEach Loop. 
+        //Console.WriteLine("Effect of Remove");
+        //for (var i = 0; i < numbers.Count; i++)
+        //{
+        //    if (numbers[i] == 1)
+        //    {
+        //        numbers.Remove(numbers[i]);
+        //    }
+        //}
+        //foreach (var num in numbers)
+        //{
+        //    Console.WriteLine(num);
+        //}
 
-        numbers.Clear();
-        Console.WriteLine($"Count: {numbers.Count}");
+        //numbers.Clear();
+        //Console.WriteLine($"Count: {numbers.Count}");
 
+        //-------------------------------------------------------------Lists examples----------------------------------------------------------------------
+        var dateTime = new DateTime(2015, 1, 1);
+        var now = DateTime.Now;
+        var today = DateTime.Today;
+        Console.WriteLine($"It is Currently {now.Hour - 12}:{now.Minute}");
+
+        var tomorrow = now.AddDays(1);
+        var yesterday = now.AddDays(-1);
+
+        Console.WriteLine($"LONG date string: {now.ToLongDateString()}");
+        Console.WriteLine($"SHORT date string: {now.ToShortDateString()}");
+        Console.WriteLine($"LONG time string: {now.ToLongTimeString()}");
+        Console.WriteLine($"SHORT time string: {now.ToShortTimeString()}");
+        Console.WriteLine($"date AND time: {now.ToString("D")}");
+        Console.WriteLine($"date AND time: {now:D}");   //same as above
 
     }
 
