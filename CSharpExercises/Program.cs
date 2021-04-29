@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
@@ -376,16 +377,21 @@ public class Program
 
         var names = fullName.Split();
 
-        Console.WriteLine(fullName);
-        Console.WriteLine(index);
-        Console.WriteLine(firstName);
-        Console.WriteLine(lastName);
+        //Console.WriteLine(fullName);
+        //Console.WriteLine(index);
+        //Console.WriteLine(firstName);
+        //Console.WriteLine(lastName);
 
-        Console.WriteLine($"Split String array First Name: {names[0]}");
-        Console.WriteLine($"Split String array Last Name: {names[1]}");
+        //Console.WriteLine($"Split String array First Name: {names[0]}");
+        //Console.WriteLine($"Split String array Last Name: {names[1]}");
+
+        var sentence = "This is a really really really really really really really really long text";
+        var summary = StringUtility.SummerizeText(sentence,25);
+        Console.WriteLine(summary);
 
 
     }
+
 
 }
 
