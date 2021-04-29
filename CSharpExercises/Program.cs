@@ -333,32 +333,57 @@ public class Program
 
         //-------------------------------------------------------------Timespan examples----------------------------------------------------------------------
 
-        //creating
-        var timespan = new TimeSpan(1,2,3);
-        var timespan1 = TimeSpan.FromHours(1);
+        ////creating
+        //var timespan = new TimeSpan(1,2,3);
+        //var timespan1 = TimeSpan.FromHours(1);
 
-        var start = DateTime.Now;
-        var end = DateTime.Now.AddMinutes(2);
-        var duration = end - start;
-        Console.WriteLine($"Duration is: {duration}");
+        //var start = DateTime.Now;
+        //var end = DateTime.Now.AddMinutes(2);
+        //var duration = end - start;
+        //Console.WriteLine($"Duration is: {duration}");
 
-        //properties
-        Console.WriteLine($"Minutes: {timespan.Minutes}");
-        Console.WriteLine($"Total Minutes: {timespan.TotalMinutes}");
+        ////properties
+        //Console.WriteLine($"Minutes: {timespan.Minutes}");
+        //Console.WriteLine($"Total Minutes: {timespan.TotalMinutes}");
 
-        // Add (adds 8 minutes to timespan)
-        Console.WriteLine($"Add Example: {timespan.Add(TimeSpan.FromMinutes(8))}");
+        //// Add (adds 8 minutes to timespan)
+        //Console.WriteLine($"Add Example: {timespan.Add(TimeSpan.FromMinutes(8))}");
 
-        //Subtract
-        Console.WriteLine($"Subtract Example: {timespan.Subtract(TimeSpan.FromMinutes(2))}");
+        ////Subtract
+        //Console.WriteLine($"Subtract Example: {timespan.Subtract(TimeSpan.FromMinutes(2))}");
 
-        //Timespan to String conversion
-        var convertedTimeSpan = timespan.ToString();
-        Console.WriteLine($"toString {convertedTimeSpan}");
+        ////Timespan to String conversion
+        //var convertedTimeSpan = timespan.ToString();
+        //Console.WriteLine($"toString {convertedTimeSpan}");
 
-        //String to Timespan
-        Console.WriteLine($"Parse: {TimeSpan.Parse("01:02:03")}");
-        Console.WriteLine($"Parse: {TimeSpan.Parse(convertedTimeSpan)}");
+        ////String to Timespan
+        //Console.WriteLine($"Parse: {TimeSpan.Parse("01:02:03")}");
+        //Console.WriteLine($"Parse: {TimeSpan.Parse(convertedTimeSpan)}");
+
+        //-------------------------------------------------------------Indepth String examples----------------------------------------------------------------------
+
+
+        String str = "1234";
+        int i = Convert.ToInt32(str);
+        Console.WriteLine(i.GetType());
+        String convertedStr = i.ToString("C"); //currency with 2 decimals
+        String convertedStr1 = i.ToString("C0"); //currency with no decimals
+
+        var fullName = "Austin Varnon";
+        var index = fullName.IndexOf(" ");
+        var firstName = fullName.Substring(0, index);
+        var lastName = fullName.Substring(index + 1);
+
+        var names = fullName.Split();
+
+        Console.WriteLine(fullName);
+        Console.WriteLine(index);
+        Console.WriteLine(firstName);
+        Console.WriteLine(lastName);
+
+        Console.WriteLine($"Split String array First Name: {names[0]}");
+        Console.WriteLine($"Split String array Last Name: {names[1]}");
+
 
     }
 
