@@ -3,6 +3,7 @@ using System.CodeDom;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
+using System.Text;
 using CSharpExercises;
 using CSharpExercises.Math;
 
@@ -387,7 +388,23 @@ public class Program
 
         var sentence = "This is a really really really really really really really really long text";
         var summary = StringUtility.SummerizeText(sentence,25);
-        Console.WriteLine(summary);
+        // Console.WriteLine(summary);
+
+        //------String Builder
+        var builder = new StringBuilder();
+        //can chain like this below rather than examples with replace, remove, etc.
+        builder
+            .Append('-', 10)
+            .AppendLine()
+            .Append("Header")
+            .AppendLine()
+            .Append('-', 10);
+
+        builder.Replace('-', '+');
+        builder.Remove(0, 5);
+        builder.Insert(2,new string('-', 10));
+
+        Console.WriteLine(builder);
 
 
     }
