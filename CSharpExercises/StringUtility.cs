@@ -16,7 +16,6 @@ namespace CSharpExercises
                 Console.WriteLine(text);
                 return text;
             }
-
             var words = text.Split(' ');
             var totalChars = 0;
             var summaryWords = new List<string>();
@@ -29,7 +28,6 @@ namespace CSharpExercises
                     break;
                 }
             }
-
             return String.Join(" ", summaryWords) + "..."; ;
         }
 

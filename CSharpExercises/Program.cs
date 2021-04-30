@@ -2,6 +2,7 @@
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using CSharpExercises;
@@ -365,46 +366,56 @@ public class Program
         //-------------------------------------------------------------Indepth String examples----------------------------------------------------------------------
 
 
-        String str = "1234";
-        int i = Convert.ToInt32(str);
-        Console.WriteLine(i.GetType());
-        String convertedStr = i.ToString("C"); //currency with 2 decimals
-        String convertedStr1 = i.ToString("C0"); //currency with no decimals
+        //String str = "1234";
+        //int i = Convert.ToInt32(str);
+        //Console.WriteLine(i.GetType());
+        //String convertedStr = i.ToString("C"); //currency with 2 decimals
+        //String convertedStr1 = i.ToString("C0"); //currency with no decimals
 
-        var fullName = "Austin Varnon";
-        var index = fullName.IndexOf(" ");
-        var firstName = fullName.Substring(0, index);
-        var lastName = fullName.Substring(index + 1);
+        //var fullName = "Austin Varnon";
+        //var index = fullName.IndexOf(" ");
+        //var firstName = fullName.Substring(0, index);
+        //var lastName = fullName.Substring(index + 1);
 
-        var names = fullName.Split();
+        //var names = fullName.Split();
 
-        //Console.WriteLine(fullName);
-        //Console.WriteLine(index);
-        //Console.WriteLine(firstName);
-        //Console.WriteLine(lastName);
+        ////Console.WriteLine(fullName);
+        ////Console.WriteLine(index);
+        ////Console.WriteLine(firstName);
+        ////Console.WriteLine(lastName);
 
-        //Console.WriteLine($"Split String array First Name: {names[0]}");
-        //Console.WriteLine($"Split String array Last Name: {names[1]}");
+        ////Console.WriteLine($"Split String array First Name: {names[0]}");
+        ////Console.WriteLine($"Split String array Last Name: {names[1]}");
 
-        var sentence = "This is a really really really really really really really really long text";
-        var summary = StringUtility.SummerizeText(sentence,25);
-        // Console.WriteLine(summary);
+        //var sentence = "This is a really really really really really really really really long text";
+        //var summary = StringUtility.SummerizeText(sentence,25);
+        //// Console.WriteLine(summary);
 
-        //------String Builder
-        var builder = new StringBuilder();
-        //can chain like this below rather than examples with replace, remove, etc.
-        builder
-            .Append('-', 10)
-            .AppendLine()
-            .Append("Header")
-            .AppendLine()
-            .Append('-', 10);
+        ////------String Builder
+        //var builder = new StringBuilder();
+        ////can chain like this below rather than examples with replace, remove, etc.
+        //builder
+        //    .Append('-', 10)
+        //    .AppendLine()
+        //    .Append("Header")
+        //    .AppendLine()
+        //    .Append('-', 10);
 
-        builder.Replace('-', '+');
-        builder.Remove(0, 5);
-        builder.Insert(2,new string('-', 10));
+        //builder.Replace('-', '+');
+        //builder.Remove(0, 5);
+        //builder.Insert(2,new string('-', 10));
 
-        Console.WriteLine(builder);
+        //Console.WriteLine(builder);
+
+        //-------------------------------------------------------------File/FileInfo class examples----------------------------------------------------------------------
+
+        var fileName = "HelloCopy.pdf";
+        var path = "C:/Users/Austin/build/hello/";
+        var singlePath = path + fileName;
+        File.Copy(path, singlePath);
+        
+        File.Delete(singlePath);
+
 
 
     }
