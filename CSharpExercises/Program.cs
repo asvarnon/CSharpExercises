@@ -414,7 +414,8 @@ public class Program
         var singlePath = path + fileName;
         File.Copy(path, singlePath);
         
-        File.Delete(singlePath);
+        // File.Delete(singlePath);
+
 
 
 
