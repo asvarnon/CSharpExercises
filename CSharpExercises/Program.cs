@@ -416,12 +416,18 @@ public class Program
 
         // File.Delete(singlePath);
 
-        var files = Directory.GetFiles(@"C:\Users\Austin\build\hello", "*.*", SearchOption.AllDirectories);
-        foreach (var file in files)
-        {
-            Console.WriteLine(file);
-        }
+        //var files = Directory.GetFiles(@"C:\Users\Austin\build\hello", "*.txt", SearchOption.AllDirectories);
+        //foreach (var file in files)
+        //{
+        //    Console.WriteLine(file);
+        //}
 
+        var directories = Directory.GetDirectories(@"C:\Users\Austin\build", "*.*", SearchOption.AllDirectories);
+        foreach (var directory in directories)
+        {
+            Console.WriteLine(directory);
+        }
+        Directory.Exists("...");
 
     }
 
