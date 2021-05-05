@@ -409,14 +409,18 @@ public class Program
 
         //-------------------------------------------------------------File/FileInfo class examples----------------------------------------------------------------------
 
-        var fileName = "HelloCopy.pdf";
-        var path = "C:/Users/Austin/build/hello/";
-        var singlePath = path + fileName;
-        File.Copy(path, singlePath);
-        
+        //fileName = "HelloCopy.pdf";
+        //var path = "C:/Users/Austin/build/hello/";
+        //var singlePath = path + fileName;
+        //File.Copy(path, singlePath);
+
         // File.Delete(singlePath);
 
-
+        var files = Directory.GetFiles(@"C:\Users\Austin\build\hello", "*.*", SearchOption.AllDirectories);
+        foreach (var file in files)
+        {
+            Console.WriteLine(file);
+        }
 
 
     }
