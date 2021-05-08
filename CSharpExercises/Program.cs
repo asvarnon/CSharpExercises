@@ -410,10 +410,10 @@ public class Program
         //-------------------------------------------------------------File/FileInfo class examples----------------------------------------------------------------------
 
         //fileName = "HelloCopy.txt";
-        var path = $"C:/Users/Austin/build/hello/HelloCopy.txt";
-        File.Copy(path, path);
+        //var path = $"C:/Users/Austin/build/hello/HelloCopy.txt";
+        //File.Copy(path, path);
 
-        File.Delete(path);
+        //File.Delete(path);
 
         var files = Directory.GetFiles(@"C:\Users\Austin\build\hello", "*.txt", SearchOption.AllDirectories);
         foreach (var file in files)
@@ -427,6 +427,10 @@ public class Program
             Console.WriteLine(directory);
         }
         Directory.Exists("...");
+
+        var directoryInfo = new DirectoryInfo("...");
+        directoryInfo.GetFiles();
+        directoryInfo.GetDirectories();
 
     }
 
