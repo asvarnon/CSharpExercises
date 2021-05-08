@@ -415,22 +415,29 @@ public class Program
 
         //File.Delete(path);
 
-        var files = Directory.GetFiles(@"C:\Users\Austin\build\hello", "*.txt", SearchOption.AllDirectories);
-        foreach (var file in files)
-        {
-            Console.WriteLine(file);
-        }
+        //var files = Directory.GetFiles(@"C:\Users\Austin\build\hello", "*.txt", SearchOption.AllDirectories);
+        //foreach (var file in files)
+        //{
+        //    Console.WriteLine(file);
+        //}
 
-        var directories = Directory.GetDirectories(@"C:\Users\Austin\build", "*.*", SearchOption.AllDirectories);
-        foreach (var directory in directories)
-        {
-            Console.WriteLine(directory);
-        }
-        Directory.Exists("...");
+        //var directories = Directory.GetDirectories(@"C:\Users\Austin\build", "*.*", SearchOption.AllDirectories);
+        //foreach (var directory in directories)
+        //{
+        //    Console.WriteLine(directory);
+        //}
+        //Directory.Exists("...");
 
-        var directoryInfo = new DirectoryInfo("...");
-        directoryInfo.GetFiles();
-        directoryInfo.GetDirectories();
+        //var directoryInfo = new DirectoryInfo("...");
+        //directoryInfo.GetFiles();
+        //directoryInfo.GetDirectories();
+
+        var path = $"C:/Users/Austin/build/hello/HelloCopy.txt";
+        Console.WriteLine(Path.GetExtension(path));
+        Console.WriteLine(Path.GetFileName(path));
+        Console.WriteLine(Path.GetFileNameWithoutExtension(path));
+        Console.WriteLine(Path.GetDirectoryName(path));
+
 
     }
 
