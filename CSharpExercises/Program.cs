@@ -433,10 +433,12 @@ public class Program
         //directoryInfo.GetDirectories();
 
         var path = $"C:/Users/Austin/build/hello/HelloCopy.txt";
+        
         Console.WriteLine(Path.GetExtension(path));
         Console.WriteLine(Path.GetFileName(path));
         Console.WriteLine(Path.GetFileNameWithoutExtension(path));
         Console.WriteLine(Path.GetDirectoryName(path));
+        Console.WriteLine(Path.GetFullPath(path));
 
 
     }
