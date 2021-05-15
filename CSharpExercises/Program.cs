@@ -432,15 +432,39 @@ public class Program
         //directoryInfo.GetFiles();
         //directoryInfo.GetDirectories();
 
-        var path = $"C:/Users/Austin/build/hello/HelloCopy.txt";
+        //var path = $"C:/Users/Austin/build/hello/HelloCopy.txt";
         
-        Console.WriteLine(Path.GetExtension(path));
-        Console.WriteLine(Path.GetFileName(path));
-        Console.WriteLine(Path.GetFileNameWithoutExtension(path));
-        Console.WriteLine(Path.GetDirectoryName(path));
-        Console.WriteLine(Path.GetFullPath(path));
+        //Console.WriteLine(Path.GetExtension(path));
+        //Console.WriteLine(Path.GetFileName(path));
+        //Console.WriteLine(Path.GetFileNameWithoutExtension(path));
+        //Console.WriteLine(Path.GetDirectoryName(path));
+        //Console.WriteLine(Path.GetFullPath(path));
 
 
+    }
+    public static List<int> getSmallests(List<int> list, int count)
+    {
+        var smallests = new List<int>();
+        while (smallests.Count > count)
+        {
+            var min = getSmallest(list);
+            smallests.Add(min);
+            list.Remove(min);
+        }
+        return smallests;
+    }
+
+    public static int getSmallest(List<int> list)
+    {
+        var min = list[0];
+        for (int i = 1; i < list.Count; i++)
+        {
+            if (list[i] > min)
+            {
+                min = list[i];
+            }
+            return min;
+        }
     }
 
 
