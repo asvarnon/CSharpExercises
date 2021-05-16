@@ -443,8 +443,8 @@ public class Program
 
         //-------------------------------------------------------------Debugging class examples----------------------------------------------------------------------
 
-        var numbers = new List<int> {};
-        var smallests = getSmallests(null, 1);
+        var numbers = new List<int> {1,2,3,4,5,6};
+        var smallests = getSmallests(numbers, 3);
 
         foreach (var number in smallests)
         {
