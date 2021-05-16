@@ -433,7 +433,7 @@ public class Program
         //directoryInfo.GetDirectories();
 
         //var path = $"C:/Users/Austin/build/hello/HelloCopy.txt";
-        
+
         //Console.WriteLine(Path.GetExtension(path));
         //Console.WriteLine(Path.GetFileName(path));
         //Console.WriteLine(Path.GetFileNameWithoutExtension(path));
@@ -441,30 +441,40 @@ public class Program
         //Console.WriteLine(Path.GetFullPath(path));
 
 
+        //-------------------------------------------------------------Debugging class examples----------------------------------------------------------------------
+
+        var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
+        var smallests = getSmallests(numbers, 3);
+
+        foreach (var number in smallests)
+        {
+            Console.WriteLine(number);
+        }
+
     }
     public static List<int> getSmallests(List<int> list, int count)
     {
         var smallests = new List<int>();
-        while (smallests.Count > count)
+        while (smallests.Count < count)
         {
-            var min = getSmallest(list);
+            var min = GetSmallest(list);
             smallests.Add(min);
             list.Remove(min);
         }
         return smallests;
     }
 
-    public static int getSmallest(List<int> list)
+    public static int GetSmallest(List<int> list)
     {
         var min = list[0];
         for (int i = 1; i < list.Count; i++)
         {
-            if (list[i] > min)
+            if (list[i] < min)
             {
                 min = list[i];
             }
-            return min;
         }
+        return min;
     }
 
 
