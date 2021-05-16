@@ -443,8 +443,8 @@ public class Program
 
         //-------------------------------------------------------------Debugging class examples----------------------------------------------------------------------
 
-        var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
-        var smallests = getSmallests(numbers, 3);
+        var numbers = new List<int> {};
+        var smallests = getSmallests(null, 1);
 
         foreach (var number in smallests)
         {
@@ -454,12 +454,21 @@ public class Program
     }
     public static List<int> getSmallests(List<int> list, int count)
     {
+        if(list == null)
+        {
+            throw new ArgumentNullException("list");
+        }
+        if (count > list.Count || count <= 0)
+        {
+            throw new ArgumentOutOfRangeException("count", "Count should be between 1 and the number within the list");
+        }
+        var buffer = new List<int>(list);
         var smallests = new List<int>();
         while (smallests.Count < count)
         {
-            var min = GetSmallest(list);
+            var min = GetSmallest(buffer);
             smallests.Add(min);
-            list.Remove(min);
+            buffer.Remove(min);
         }
         return smallests;
     }
