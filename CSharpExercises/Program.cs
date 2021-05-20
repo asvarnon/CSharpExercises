@@ -443,13 +443,24 @@ public class Program
 
         //-------------------------------------------------------------Debugging class examples----------------------------------------------------------------------
 
-        var numbers = new List<int> {1,2,3,4,5,6};
-        var smallests = getSmallests(numbers, 3);
+        //var numbers = new List<int> {1,2,3,4,5,6};
+        //var smallests = getSmallests(numbers, 3);
 
-        foreach (var number in smallests)
-        {
-            Console.WriteLine(number);
-        }
+        //foreach (var number in smallests)
+        //{
+        //    Console.WriteLine(number);
+        //}
+
+        //-------------------------------------------------------------OOP examples----------------------------------------------------------------------
+
+        var person = new Person();
+        person.firstName = "Joe";
+        person.lastName = "Dirt";
+        person.introduce("Austin");
+
+        var p = Person.Parse("Austin", "Varnon");
+        p.introduce("Joe");
+
 
     }
     public static List<int> getSmallests(List<int> list, int count)
