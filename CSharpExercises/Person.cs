@@ -5,6 +5,19 @@ public class Person
     public string firstName;
     public string lastName;
 
+    public Person()
+    {
+    }
+    public Person(string firstName)
+    {
+        this.firstName = firstName;
+    }
+    public Person(string firstName, string lastName)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public void introduce(string receiver)
     {
         Console.WriteLine($"Hello {receiver}, My name is {firstName} {lastName}.");
