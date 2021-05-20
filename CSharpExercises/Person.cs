@@ -2,8 +2,8 @@
 
 public class Person
 {
-    public string firstName;
-    public string lastName;
+    private string firstName;
+    private string lastName;
 
     public Person()
     {
