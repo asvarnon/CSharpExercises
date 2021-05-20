@@ -453,9 +453,7 @@ public class Program
 
         //-------------------------------------------------------------OOP examples----------------------------------------------------------------------
 
-        var person = new Person();
-        person.firstName = "Joe";
-        person.lastName = "Dirt";
+        var person = new Person("Joe", "Dirt");
         person.introduce("Austin");
 
         var p = Person.Parse("Austin", "Varnon");
