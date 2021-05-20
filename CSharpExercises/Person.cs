@@ -12,18 +12,19 @@ public class Person
         orders = new List<Order>();
     }
     public Person(string firstName)
-        : this()
     {
         this.firstName = firstName;
     }
     public Person(string firstName, string lastName)
-        : this(firstName)
     {
+        this.firstName = firstName;
         this.lastName = lastName;
     }
     public Person(string firstName, string lastName, List<Order> orders)
-        : this(firstName, lastName)
+        :this()
     {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.orders = orders;
     }
 
