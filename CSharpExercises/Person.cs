@@ -1,21 +1,30 @@
 ﻿using System;
+using System.Collections.Generic;
 
 public class Person
 {
     private string firstName;
     private string lastName;
+    private List<Order> orders;
 
     public Person()
     {
+        orders = new List<Order>();
     }
     public Person(string firstName)
+        : this()
     {
         this.firstName = firstName;
     }
     public Person(string firstName, string lastName)
+        : this(firstName)
     {
-        this.firstName = firstName;
         this.lastName = lastName;
+    }
+    public Person(string firstName, string lastName, List<Order> orders)
+        : this(firstName, lastName)
+    {
+        this.orders = orders;
     }
 
     public void introduce(string receiver)
