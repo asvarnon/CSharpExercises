@@ -1,4 +1,6 @@
-﻿namespace CSharpExercises.Math
+﻿using System;
+
+namespace CSharpExercises.Math
 {
     public class Point
     {
@@ -19,8 +21,11 @@
 
         public void move(Point newLocation)
         {
-            this.x = newLocation.x;
-            this.y = newLocation.y;
+            if (newLocation == null)
+            {
+                throw new ArgumentNullException("newLocation");
+            }
+            move(newLocation.x, newLocation.y);
         }
     }
 }

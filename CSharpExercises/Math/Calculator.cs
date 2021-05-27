@@ -1,14 +1,19 @@
 ﻿namespace CSharpExercises.Math
 {
    
-    public static class Calculator
+    public class Calculator
     {
-        public static int add(int a, int b)
+        public int add(params int[] numbers)
         {
-            return a + b;
+            var sum = 0;
+            foreach (var number in numbers)
+            {
+                sum += number;
+            }
+            return sum;
         }
 
-        public static int subtract(int a, int b)
+        public int subtract(int a, int b)
         {
             return a - b;
         }

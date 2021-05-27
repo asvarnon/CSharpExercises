@@ -455,17 +455,36 @@ public class Program
 
         //-------------------------------------------------------------OOP examples----------------------------------------------------------------------
 
-        var person = new Person("Joe", "Dirt");
-        person.introduce("Austin");
+        //var person = new Person("Joe", "Dirt");
+        //person.introduce("Austin");
 
-        var p = Person.Parse("Austin", "Varnon");
-        p.introduce("Joe");
+        //var p = Person.Parse("Austin", "Varnon");
+        //p.introduce("Joe");
 
-        Calculator.add(2, 3);
+        //var point = new Point(10, 20);
+        //point.move(new Point(40, 60));
+        //Console.WriteLine($"Point is at ({point.x},{point.y})");
 
-        var point = new Point(10, 20);
-        point.move(new Point(40, 60));
-        Console.WriteLine($"Point is at ({point.x},{point.y})");
+
+        //point.move(100, 200);
+        //Console.WriteLine(point);
+
+        //var calculator = new Calculator();
+        //Console.WriteLine(calculator.add(1, 2));
+        //Console.WriteLine(calculator.add(1, 2, 3));
+        //Console.WriteLine(calculator.add(new int[] {1,2,3,4,5 }));
+
+        int number;  
+        var result = int.TryParse("abc", out number);
+
+    if (result)
+        {
+            Console.WriteLine(number);
+        }
+    else
+        {
+            Console.WriteLine("Coverstion failed");
+        }
 
     }
 
