@@ -463,6 +463,9 @@ public class Program
 
         Calculator.add(2, 3);
 
+        var point = new Point(10, 20);
+        point.move(new Point(40, 60));
+        Console.WriteLine($"Point is at ({point.x},{point.y})");
 
     }
 
